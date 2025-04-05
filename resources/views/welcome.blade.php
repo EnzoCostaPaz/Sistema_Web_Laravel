@@ -27,11 +27,11 @@
         @csrf
         <div class="conatainer_nome">
             <label class="Nome_Label">Nome</label>
-            <input type="text" name="Nome_Input" id="Nome_Input" requiered>
+            <input type="text" name="Nome_Input" id="Nome_Input" required>
         </div>
         <div class="conatainer_Email">
             <label class="Telefone_Label">Telefone</label>
-            <input type="text" name="Telefone_Input" id="Telefone_Input" requiered>
+            <input type="text" name="Telefone_Input" id="Telefone_Input" required>
         </div>
 
         <div class="conatainer_Origens">
@@ -46,7 +46,7 @@
 
         <div class="container_Data">
             <label class="Data_Label">Data de Contato</label>
-            <input type="date" class="Data_Input" name="Data_Input" requiered>
+            <input type="date" class="Data_Input" name="Data_Input" required>
         </div>
 
         <div class="Container_Observes">
