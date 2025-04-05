@@ -51,7 +51,7 @@
 
         <div class="Container_Observes">
             <label class="Observacoes_Label">Observações</label>
-            <textarea class="Observaoes_Text" rows="4" name="Oberserve_Input" requiered></textarea>
+            <textarea class="Observaoes_Text" rows="4" name="Oberserve_Input" required></textarea>
 
         </div>
 
