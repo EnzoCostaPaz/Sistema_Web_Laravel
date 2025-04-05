@@ -14,7 +14,7 @@
         <input type="text" name="Nome_Input" value="{{$cliente->Nome_Input}}">
         <br><br>
         <label for="Telefone_Label" class="Telefone_Label">Telefone:</label>
-        <input type="text" name="Telefone_Input" value="`{{$cliente->Telefone_Input}}">
+        <input type="text" name="Telefone_Input" value="{{$cliente->Telefone_Input}}">
         <br><br>
         <label for="Select_Origens">Origem:</label>
         <br>
