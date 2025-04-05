@@ -24,7 +24,7 @@ Route::post('/cadastrar_Cliente', function(Request $request){
     echo "Cliente Cadastrado";
 
 });
-Route::get('/listar_produtos/{id}',function($id){
+Route::get('/listar_clientes/{id}',function($id){
     //dd(Produto::find($id)); //debug and die
     $cliente = Cliente::find($id);
     return view('listar',['cliente' => $cliente]);
