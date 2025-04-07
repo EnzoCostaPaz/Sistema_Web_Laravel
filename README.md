@@ -2,7 +2,13 @@
 Esse projeto tem o objetivo de desenvolver uma aplicação CRUD(create,read,update,delete) utilizando do framework <a href ="https://laravel.com">Laravel</a> conectado ao banco de dados <a href="https://www.mysql.com">MySQL</a> com <a href ="https://mariadb.org">MariaDB</a>
 
 ### Linguagens e Frameworks Utilizados
+#### Front-End:
+<img alt="Static Badge" src="https://img.shields.io/badge/html-%23E34F26?style=for-the-badge&logo=html5&logoColor=%23E34F26&labelColor=%23000000"> <img alt="Static Badge" src="https://img.shields.io/badge/css-%23663399?style=for-the-badge&logo=css&logoColor=%23663399&labelColor=%23000000">
 
+#### Back-End:
+<img alt="Static Badge" src="https://img.shields.io/badge/PHP-%23777BB4?style=for-the-badge&logo=php&logoColor=%23777BB4&labelColor=%23000000"> <img alt="Static Badge" src="https://img.shields.io/badge/mysql-%234479A1?style=for-the-badge&logo=mysql&logoColor=%234479A1&labelColor=%23000000"> <img alt="Static Badge" src="https://img.shields.io/badge/mariadb-%23003545?style=for-the-badge&logo=mariadb&logoColor=%23003545&labelColor=%23000000">
+#### Framework:
+<img alt="Static Badge" src="https://img.shields.io/badge/laravel-%23FF2D20?style=for-the-badge&logo=laravel&logoColor=%23FF2D20&labelColor=%23000000">
 
 ## como acessar cada pagina?
 - <b>Cadastrar cliente</b>:
