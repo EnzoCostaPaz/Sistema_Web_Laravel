@@ -16,7 +16,7 @@
         </ul>
     </nav>
     <div class="container">
-        <label class="Label-Inform">Listagem de Clientes</label>
+        <label class="Label-Inform">Deletar Clientes</label>
     </div>
 
     <form>
