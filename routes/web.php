@@ -53,10 +53,25 @@ Route::post('/editar_cliente/{id}', function(Request $request, $id){
     echo "Produto editado com sucesso!";
 });
 
-Route::get('/excluir_cliente/{id}', function($id){
+//excluir
+
+Route::get('/excluir_cliente/{id}', function ($id) {
+     //dd(Produto::find($id)); //debug and die
+    $cliente = Cliente::find($id);
+    return view('deletar', ['cliente' => $cliente]);
+});
+
+Route::post('/excluir_cliente/{id}', function (Request $request, $id) {
     //dd($request->all());
-    $cliente = Cliente:: find($id);
-    $cliente->delete();
+    $cliente = Cliente::find($id);
+
+    $cliente->delete([
+        'Nome_Input' => $request->Nome_Input,
+        'Telefone_Input' => $request->Telefone_Input,
+        'Select_Origens' => $request->Select_Origens,
+        'Data_Input' => $request->Data_Input,
+        'Oberserve_Input' => $request->Oberserve_Input 
+    ]);
 
     echo "Cliente Excluido com sucesso";
 });
