@@ -8,6 +8,19 @@
 </head>
 
 <body>
+
+    <nav>
+        <label class="Titulo">Sistema Web</label>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Consultar</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <label class="Label-Inform">Listagem de Clientes</label>
+    </div>
+
     <form action="/editar_cliente/{{ $cliente->id}}" method="post">
         @csrf
         <label for="Nome_Label" class="Nome_Label">Nome:</label>
