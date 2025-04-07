@@ -19,7 +19,9 @@
         <label class="Label-Inform">Deletar Clientes</label>
     </div>
 
-    <form>
+    <form action="/excluir_cliente/{{$cliente->id}}" method="post">
+        @csrf
+
         <div class="conatainer_nome">
             <label for="Nome_Label" class="Nome_Label">Nome:</label>
             <input type="text" name="Nome_Input" value="{{ $cliente->Nome_Input }}" disabled>
