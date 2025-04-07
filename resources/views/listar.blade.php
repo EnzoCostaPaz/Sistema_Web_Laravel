@@ -7,8 +7,6 @@
     <title>VIsualizar clientes</title>
 </head>
 
-
-
 <body>
     <nav>
         <label class="Titulo">Sistema Web</label>
@@ -55,7 +53,6 @@
 <style>
  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
 
-/* ---------- RESET E GERAL ---------- */
 body {
     font-family: 'Kanit', sans-serif;
     background-color: #f8f9fa;
@@ -67,7 +64,6 @@ body {
     height: 100vh;
 }
 
-/* ---------- NAVEGAÇÃO ---------- */
 nav {
     width: 100%;
     background-color: #007bff;
@@ -113,7 +109,6 @@ nav {
     text-shadow: 0px 0px 5px #fff;
 }
 
-/* ---------- TÍTULO PRINCIPAL ---------- */
 .Label-Inform {
     margin-bottom: 90px;
     font-size: 30px;
@@ -123,7 +118,6 @@ nav {
     margin-top: 65px;
 }
 
-/* ---------- FORMULÁRIO ---------- */
 form {
     background-color: #ffffff;
     padding: 20px;
@@ -136,7 +130,6 @@ form {
     gap: 20px;
 }
 
-/* ---------- GRUPOS DE CAMPOS ---------- */
 .container_nome,
 .container_telefone,
 .container_observacoes,
@@ -146,7 +139,6 @@ form {
     flex-direction: column;
 }
 
-/* ---------- ESTILO DOS ELEMENTOS ---------- */
 label {
     font-weight: bold;
     margin-bottom: 5px;
