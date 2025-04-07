@@ -18,7 +18,7 @@
     </nav>
 
     <div class="container">
-        <label class="Label-Inform">Listagem de Clientes</label>
+        <label class="Label-Inform">Edição de Clientes</label>
     </div>
 
     <form action="/editar_cliente/{{ $cliente->id}}" method="post">
