@@ -44,6 +44,8 @@
             <label for="Data_Label" class="Data_Label">Data de Contato:</label>
             <input type="date" name="Data_Input" value="{{ $cliente->Data_Input }}" disabled>
         </div>
+
+        <button>Editar</button>
     </form>
 </body>
 
