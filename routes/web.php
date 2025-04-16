@@ -8,9 +8,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//rota para levar para a pagina de cadastrar
+Route::get('/cadastrar_cliente', function () {
+    return view('cadastrar'); // essa será sua view do formulário
+});
 Route::post('/cadastrar_Cliente', function(Request $request){
 
-    //dd($requesr->all());
+    //dd($request->all());
 
     Cliente::create([
         'Nome_Input' => $request ->Nome_Input,
@@ -29,6 +33,13 @@ Route::get('/listar_clientes/{id}',function($id){
     $cliente = Cliente::find($id);
     return view('listar',['cliente' => $cliente]);
 });
+
+//Rota para mostrar todos os clientes
+Route::get('/', function () {
+    $clientes = Cliente::all(); // pega todos os clientes
+    return view('welcome', ['clientes' => $clientes]);
+});
+
 
 //Editar
 
