@@ -16,47 +16,45 @@
         <label class="Titulo">Sistema Web</label>
         <ul class="menu">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Consultar</a></li>
     </nav>
 
     <div class="container">
         <label class="Label-Inform"> Sistema de Agendamenento de serviços</label>
     </div>
 
-    <form action="/cadastrar_Cliente" method="POST">
-        @csrf
-        <div class="conatainer_nome">
-            <label class="Nome_Label">Nome</label>
-            <input type="text" name="Nome_Input" id="Nome_Input" required>
-        </div>
-        <div class="conatainer_Email">
-            <label class="Telefone_Label">Telefone</label>
-            <input type="text" name="Telefone_Input" id="Telefone_Input" required>
-        </div>
+    <div class="container mt-4">
+        <a href="/cadastrar_cliente" class="btn btn-success">Cadastrar Novo Cliente</a>
+    </div>
+    
+    <div class="container mt-5">
+        <h2>Lista de Clientes</h2>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Origem</th>
+                <th>Data</th>
+                <th>Observações</th>
+            </tr>
 
-        <div class="conatainer_Origens">
-            <label class="Origens_label">Origens</label>
-            <br>
-            <select class="Select_Origens" name="Select_Origens">
-                <option value="Celular">Celular</option>
-                <option value="Telefone-Fixo">Telefone-Fixo</option>
-                <option value="Whatsapp">Whatsapp</option>
-            </select>
-        </div>
+            @if($clientes->isEmpty())
+            <p class="text-center mt-3">Nenhum cliente cadastrado ainda.</p>
+            @else
+            @foreach($clientes as $cliente)
+            <tr>
+                <td>{{ $cliente->Nome_Input }}</td>
+                <td>{{ $cliente->Telefone_Input }}</td>
+                <td>{{ $cliente->Select_Origens }}</td>
+                <td>{{ $cliente->Data_Input }}</td>
+                <td>{{ $cliente->Oberserve_Input }}</td>
+            </tr>
+            @endforeach
+            @endif
 
-        <div class="container_Data">
-            <label class="Data_Label">Data de Contato</label>
-            <input type="date" class="Data_Input" name="Data_Input" required>
-        </div>
 
-        <div class="Container_Observes">
-            <label class="Observacoes_Label">Observações</label>
-            <textarea class="Observaoes_Text" rows="4" name="Oberserve_Input" required></textarea>
+        </table>
+    </div>
 
-        </div>
-
-        <button type="submit">Cadastrar</button>
-    </form>
 </body>
 
 </html>
@@ -166,65 +164,5 @@
     .menu li ul li a:hover {
         background-color: #007bff;
         color: white;
-    }
-
-    /* Ajuste do formulário para evitar sobreposição com o menu */
-    form {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        width: 38.75rem;
-        margin-top: 70px;
-        /* Evita que o formulário fique coberto pelo menu */
-    }
-
-    /* Ajuste dos containers */
-    .conatainer_nome,
-    .conatainer_Email,
-    .conatainer_Origens,
-    .container_Data,
-    .Container_Observes {
-        margin-bottom: 15px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Estilização dos rótulos */
-    label {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    /* Estilização dos inputs e textarea */
-    input,
-    select,
-    textarea {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-
-    /* Ajuste do botão */
-    button {
-        background-color: #007bff;
-        color: white;
-        border: none;
-        padding: 10px;
-        font-size: 16px;
-        width: 100%;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-
-    a {
-        background-color: none;
-        color: #fff;
-    }
-
-    button:hover {
-        background-color: #0056b3;
     }
 </style>
