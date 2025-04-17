@@ -13,26 +13,10 @@ Esse projeto tem o objetivo de desenvolver uma aplicação CRUD(create,read,upda
 ## como acessar cada pagina?
 - <b>Cadastrar cliente</b>:
   <br>
-  inice o servidor e coloque no navegador o ip do servidor que estará como link
+  inice o servidor e coloque no navegador o ip do servidor que estará como link e você será redirecionado para a seguinte tela
   <br><br>
-  <img src="https://github.com/user-attachments/assets/cb18f747-ef7f-411d-9390-ab86ec9965e5" widht="350px" height="350px">
+  <img src="https://github.com/user-attachments/assets/a9b9739a-4b95-49da-9701-b3f597ad60fc" widht="350px" height="350px">
   <br>
-- <b>Listar Cliente</b>
-  <br>
-  adicione o caminho "/listar_clientes/id-do-cliente-desajado" junto com ao link do servidor
-  <br><br>
-  <img src="https://github.com/user-attachments/assets/75ac5c7b-258d-41a4-aa62-53cbc40afbf4" widht="350px" height="350px">
-  <br>
-- <b>Editar clientes</b>
-  <br>
-  adicione o caminho "/editar_cliente/id-do-cliente-desajado" junto ao link do servidor
-  <br><br>
-  <img src="https://github.com/user-attachments/assets/fd63eb5c-8801-4410-9cd4-30706487eac0" widht="350px" height="350px">
-- <b>Excluir Cliente</b>
-  <br>
-  Adicione o caminho "/excluir_cliente/id-do-cliente-desajado" junto ao link do servidor
-  <br><br>
-  <img src="https://github.com/user-attachments/assets/c7c9034b-b42f-4777-b596-416d2911435a" widht="350px" height="350px">
   ##
   Lembrando que este projeto só funcionará completo se:
   - o arquivo <b>.env</b> estiver junto ao projeto e configurado para a linguagem MYSql
