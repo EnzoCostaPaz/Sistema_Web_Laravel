@@ -25,7 +25,7 @@ Route::post('/cadastrar_Cliente', function(Request $request){
 
     ]);
 
-    echo "Cliente Cadastrado";
+    return redirect('/')->with('success', 'Cliente cadastrado com sucesso!');
 
 });
 Route::get('/listar_clientes/{id}',function($id){
@@ -61,7 +61,7 @@ Route::post('/editar_cliente/{id}', function(Request $request, $id){
         'Data_Input' => $request->Data_Input,
         'Oberserve_Input' => $request->Oberserve_Input 
     ]);
-    echo "Produto editado com sucesso!";
+    return redirect('/')->with('success', 'Cliente editado com sucesso!');
 });
 
 //excluir
@@ -84,7 +84,7 @@ Route::post('/excluir_cliente/{id}', function (Request $request, $id) {
         'Oberserve_Input' => $request->Oberserve_Input 
     ]);
 
-    echo "Cliente Excluido com sucesso";
+    return redirect('/')->with('success', 'Cliente excluído com sucesso!');
 });
 
 
