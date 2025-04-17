@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <body>
 
@@ -52,8 +49,16 @@
                     <label>Observações:</label>
                     <span>{{ $cliente->Oberserve_Input }}</span>
                 </div>
-                <div class="info-row">
-                    <button class="Visu_Btn">Teste</button>
+                <div class="info_row_buttons">
+                    <button class="Visu_Btn">
+                        <a href="/listar_clientes/{{ $cliente->id }}">Visualizar</a>
+                    </button>
+                    <button class="Edi_Btn">
+                        <a href="/editar_cliente/{{ $cliente->id }}">Editar</a>
+                    </button>
+                    <button class="Del_Btn">
+                        <a href="/excluir_cliente/{{ $cliente->id }}">Deletar</a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -66,8 +71,8 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-    /* Reset básico */
     body {
         font-family: Arial, sans-serif;
         background-color: #f8f9fa;
@@ -77,6 +82,7 @@
         flex-direction: column;
         align-items: center;
         height: 100vh;
+        padding-top: 80px;
     }
 
     /* Estilização do menu */
@@ -98,6 +104,7 @@
         margin-left: 21.88px;
         font-family: 'Kanit';
         font-size: 30px;
+        bottom: 50px;
     }
 
     .Titulo {
@@ -249,5 +256,50 @@
         border-radius: 5px;
         background-color: #0056b3;
         font-family: 'Roboto';
+    }
+
+    .Cadastrar_Btn:hover button {
+        background-color: rgb(4, 57, 114);
+    }
+
+    .Visu_Btn,
+    .Edi_Btn {
+        flex-direction: row;
+        border: 1px solid #333;
+        width: 90px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #0056b3;
+        font-family: 'Roboto';
+        text-decoration: none;
+    }
+
+    .Del_Btn {
+        background-color: #A52A2A;
+        flex-direction: row;
+        border: 1px solid #333;
+        width: 90px;
+        height: 30px;
+        border-radius: 5px;
+        font-family: 'Roboto';
+        text-decoration: none;
+    }
+
+    .Del_Btn:hover {
+    background-color: rgb(105, 0, 0);
+}
+
+    .Visu_Btn,
+    .Edi_Btn,
+    .Del_Btn,
+    a {
+        text-decoration: none;
+        color: #ccc;
+    }
+
+    .info_row_buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
     }
 </style>
