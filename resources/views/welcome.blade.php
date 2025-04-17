@@ -95,9 +95,7 @@
     }
 
     .Label-Inform {
-        margin-top: 60px;
-        margin-left: 21.880;
-        margin-top: 130px;
+        margin-left: 21.88px;
         font-family: 'Kanit';
         font-size: 30px;
     }
@@ -169,5 +167,87 @@
     .menu li ul li a:hover {
         background-color: #007bff;
         color: white;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 100px;
+    }
+
+    .cliente_box {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width: 31.25rem;
+        font-family: Arial, sans-serif;
+        margin-top: 110px;
+    }
+
+    .cliente_box label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .infos {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .info-row {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .info-row label {
+        font-weight: bold;
+        color: #555;
+        margin: 0;
+    }
+
+    .info-row span {
+        color: #333;
+        background-color: #e9ecef;
+        padding: 6px 10px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    .Cadastrar_Btn {
+        margin-top: 200px
+    }
+
+    .Container_Clients {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .Cadastrar_Btn {
+        margin-top: 0;
+    }
+
+    .Cadastrar_Btn a {
+        text-decoration: none;
+        color: #ccc;
+    }
+
+    .Cadastrar_Btn button {
+        border: 1px solid #333;
+        width: 190px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: #0056b3;
+        font-family: 'Roboto';
     }
 </style>
