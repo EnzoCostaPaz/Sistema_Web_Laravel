@@ -19,42 +19,47 @@
     </nav>
 
     <div class="container">
-        <label class="Label-Inform"> Sistema de Agendamenento de serviços</label>
+        <label class="Label-Inform">Sistema de Agendamento de serviços</label>
+
+        <div class="Cadastrar_Btn">
+            <button class="btn_Cad"><a href="/cadastrar_cliente">Cadastrar Novo Cliente</a></button>
+        </div>
     </div>
-
-    <div class="container mt-4">
-        <a href="/cadastrar_cliente" class="btn btn-success">Cadastrar Novo Cliente</a>
+    @if($clientes->isEmpty())
+    <p class="Info_erro">Nenhum cliente cadastrado ainda.</p>
+    @else
+    <div class="Container_Clients">
+        @foreach($clientes as $cliente)
+        <div class="cliente_box">
+            <div class="infos">
+                <div class="info-row">
+                    <label>Nome:</label>
+                    <span>{{ $cliente->Nome_Input }}</span>
+                </div>
+                <div class="info-row">
+                    <label>Telefone:</label>
+                    <span>{{ $cliente->Telefone_Input }}</span>
+                </div>
+                <div class="info-row">
+                    <label>Origem:</label>
+                    <span>{{ $cliente->Select_Origens }}</span>
+                </div>
+                <div class="info-row">
+                    <label>Data:</label>
+                    <span>{{ $cliente->Data_Input }}</span>
+                </div>
+                <div class="info-row">
+                    <label>Observações:</label>
+                    <span>{{ $cliente->Oberserve_Input }}</span>
+                </div>
+                <div class="info-row">
+                    <button class="Visu_Btn">Teste</button>
+                </div>
+            </div>
+        </div>
+        @endforeach
     </div>
-    
-    <div class="container mt-5">
-        <h2>Lista de Clientes</h2>
-        <table class="table table-bordered table-striped">
-            <tr>
-                <th>Nome</th>
-                <th>Telefone</th>
-                <th>Origem</th>
-                <th>Data</th>
-                <th>Observações</th>
-            </tr>
-
-            @if($clientes->isEmpty())
-            <p class="text-center mt-3">Nenhum cliente cadastrado ainda.</p>
-            @else
-            @foreach($clientes as $cliente)
-            <tr>
-                <td>{{ $cliente->Nome_Input }}</td>
-                <td>{{ $cliente->Telefone_Input }}</td>
-                <td>{{ $cliente->Select_Origens }}</td>
-                <td>{{ $cliente->Data_Input }}</td>
-                <td>{{ $cliente->Oberserve_Input }}</td>
-            </tr>
-            @endforeach
-            @endif
-
-
-        </table>
-    </div>
-
+    @endif
 </body>
 
 </html>
